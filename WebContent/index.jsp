@@ -16,7 +16,7 @@
 <body>
 
 	<h1>hello jsp</h1>
-	<form action="<%=basePath%>/test7.htm" method="get">
+	<form action="<%=basePath%>/test6.shtml" method="get">
 		<p>
 			用户： <input type="text" name="user">
 		</p>
