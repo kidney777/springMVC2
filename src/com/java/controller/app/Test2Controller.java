@@ -14,7 +14,10 @@ package com.java.controller.app;
  */
 
 import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Field;
+import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 
 import javax.servlet.ServletContext;
@@ -25,6 +28,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartRequest;
+
+import com.java.utils.FilesUpload;
 
 @Controller
 @RequestMapping(value = "/upload/")
@@ -46,13 +52,29 @@ public class Test2Controller {
 		String uuid = UUID.randomUUID().toString();
 		// 3. 保存到指定目录下
 
-		
 		File filePath = new File("E:\\eclipse_workspace\\springMVC2\\WebContent\\upload\\" + uuid + originalFilename);
-		//4.这里切换路径
+		// 4.这里切换路径
 		// String path = request.getServletContext().getRealPath("/upload");
 		// File filePath = new File(path + "\\" + uuid + originalFilename);
 
 		file.transferTo(filePath);
+	}
+
+	@RequestMapping("multiFileUpload")
+	public void multiFileUpload(MultipartRequest files, HttpServletRequest request) throws Exception {
+		// Map<String, MultipartFile> filesmap = files.getFileMap();
+		// Set<String> keyset = filesmap.keySet();
+		// for (String key:keyset) {
+		// MultipartFile file = files.getFile(key);
+		// String originalFilename = file.getOriginalFilename();
+		// String uuid = UUID.randomUUID().toString();
+		// File filePath = new
+		// File("E:\\eclipse_workspace\\springMVC2\\WebContent\\upload\\" + uuid
+		// + originalFilename);
+		// file.transferTo(filePath);
+		// }
+		Map<String, Object> filesMap = FilesUpload.uploadFiles(request, files);
+		System.out.println(filesMap);
 	}
 
 	@RequestMapping("getUploadPath")

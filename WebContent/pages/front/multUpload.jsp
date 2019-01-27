@@ -15,9 +15,11 @@
 
 <body>
 
-		<form action="<%=basePath %>//upload/singleFileUpload.shtml" method ="post" enctype ="multipart/form-data">
+		<form action="<%=basePath %>//upload/multiFileUpload.shtml" method ="post" enctype ="multipart/form-data">
 		<p>大头照：<input type="file" name="bigHeadImage"></p>
-
+		<p>大头照2：<input type="file" name="bigHeadImage1"></p>
+		<p>大头照3：<input type="file" name="bigHeadImage2"></p>
+<!-- 		<p>GoodID：<input type="text" name="goodId"></p> -->
 		<p><input type="submit" value="上传"></p>
 		</form>
 </body>
