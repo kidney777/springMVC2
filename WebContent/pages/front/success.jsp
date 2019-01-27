@@ -15,22 +15,12 @@
 
 <body>
 
-	<h1>hello jsp</h1>
-	<form action="<%=basePath%>/test7.htm" method="get">
-		<p>
-			用户： <input type="text" name="user">
-		</p>
-		<p>
-			年&nbsp;龄: <input type="text" name="age">
-		</p>
+	<h1 style="color: red">成功</h1>
 
-		<p>
-			密&nbsp;码： <input type="text" name="pass">
-		</p>
-
-		<p>
-			<input type="submit" value="submit">
-		</p>
-	</form>
+	通过MAP封装数据：
+	<br>username = ${requestScope.username}
+	<br> age = ${requestScope.age} 
+	<br>password  = ${requestScope.password}
+	<br>session = ${requestScope.session}
 </body>
 </html>

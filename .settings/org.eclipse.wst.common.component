@@ -3,7 +3,7 @@
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/resource"/>
-        <property name="context-root" value="springMVC2"/>
         <property name="java-output-path" value="/springMVC2/build/classes"/>
+        <property name="context-root" value="springMVC2"/>
     </wb-module>
 </project-modules>

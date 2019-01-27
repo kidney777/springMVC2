@@ -9,28 +9,15 @@
 <head>
 <base href="<%=basePath%>">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Upload</title>
 </head>
 
 
 <body>
 
-	<h1>hello jsp</h1>
-	<form action="<%=basePath%>/test7.htm" method="get">
-		<p>
-			用户： <input type="text" name="user">
-		</p>
-		<p>
-			年&nbsp;龄: <input type="text" name="age">
-		</p>
-
-		<p>
-			密&nbsp;码： <input type="text" name="pass">
-		</p>
-
-		<p>
-			<input type="submit" value="submit">
-		</p>
-	</form>
+		<form action="<%=basePath %>//upload/singleFileUpload.shtml" method ="post" enctype ="multipart/form-data">
+		<p>大头照：<input type="file" name="bigHeadImage"></p>
+		<p><input type="submit" value="上传"></p>
+		</form>
 </body>
 </html>

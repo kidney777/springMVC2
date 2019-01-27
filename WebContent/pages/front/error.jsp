@@ -15,22 +15,8 @@
 
 <body>
 
-	<h1>hello jsp</h1>
-	<form action="<%=basePath%>/test7.htm" method="get">
-		<p>
-			用户： <input type="text" name="user">
-		</p>
-		<p>
-			年&nbsp;龄: <input type="text" name="age">
-		</p>
-
-		<p>
-			密&nbsp;码： <input type="text" name="pass">
-		</p>
-
-		<p>
-			<input type="submit" value="submit">
-		</p>
-	</form>
+	<h1 style = "color:red">ERROR</h1>
+	<img src = "<%=basePath%>/resources/images/error.jpg">
+	
 </body>
 </html>
