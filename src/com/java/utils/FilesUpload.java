@@ -46,7 +46,7 @@ public class FilesUpload {
                 // 保存文件
                 String filePath = basePath + "\\" + uuid + originalFilename;
                 file.transferTo(new File(filePath));
-				
+				//返回set<> key=uuid, Vaule = uuid+fileName
 				String positivePath = "upload/"+uuid+originalFilename;
 				filesPathMap.put(uuid, positivePath);//key必须不一样 uuid key
 			}

@@ -79,9 +79,6 @@ public class Test2Controller {
 
 	@RequestMapping("getUploadPath")
 	public void getUploadPath(HttpServletRequest request) {
-		// ServletContext sc = request.getServletContext();
-
-		// String path = sc.getRealPath("/upload");
 		String path = request.getSession().getServletContext().getRealPath("/upload");
 		System.out.println(path);
 	}
